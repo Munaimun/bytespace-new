@@ -6,6 +6,9 @@ import CourseDiscovery from "@/components/CourseDiscovery";
 import CourseGrid from "@/components/CourseGrid";
 import LearningPaths from "@/components/LearningPaths";
 import LearningShowcase from "@/components/LearningShowcase";
+import CreatorBanner from "@/components/CreatorBanner";
+import CommunityTestimonials from "@/components/CommunityTestimonials";
+import SiteFooter from "@/components/SiteFooter";
 
 
 
@@ -65,6 +68,9 @@ export default function Home() {
       <CourseGrid />
       <LearningPaths />
       <LearningShowcase />
+      <CreatorBanner />
+      <CommunityTestimonials />
+      <SiteFooter />
  </main>
   );
 }
