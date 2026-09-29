@@ -6,6 +6,9 @@ import CourseDiscovery from "@/components/CourseDiscovery";
 import CourseGrid from "@/components/CourseGrid";
 import LearningPaths from "@/components/LearningPaths";
 import LearningShowcase from "@/components/LearningShowcase";
+import CreatorBanner from "@/components/CreatorBanner";
+import CommunityTestimonials from "@/components/CommunityTestimonials";
+import SiteFooter from "@/components/SiteFooter";
 
 
 
@@ -27,8 +30,8 @@ export default function Home() {
         </nav>
 
         <div className="header-actions pixel-actions gap-3.25! text-[15px]! max-md:hidden!">
-          <a className="login-link" href="#login">Sign In</a>
-          <a className="pixel-signup" href="#signup">Join Us</a>
+          <a className="login-link" href="login">Sign In</a>
+          <a className="pixel-signup" href="signup">Join Us</a>
           <a className="bag-link" href="#courses" aria-label="Course bag"><Image src="/assets/shopping-bag.png" alt="" width={13} height={13} /></a>
         </div>
         <button className="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>
@@ -65,6 +68,9 @@ export default function Home() {
       <CourseGrid />
       <LearningPaths />
       <LearningShowcase />
+      <CreatorBanner />
+      <CommunityTestimonials />
+      <SiteFooter />
  </main>
   );
 }
