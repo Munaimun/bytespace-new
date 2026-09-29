@@ -28,7 +28,7 @@ export default function Home() {
           priority
         />
         <Image
-          className="pixel-decoration lime-square h-92.5! w-92.5! "
+          className="pixel-decoration lime-square h-92.5! w-92.5!"
           src="/assets/lime-sqaure.png"
           alt=""
           width={104}
@@ -36,7 +36,7 @@ export default function Home() {
           priority
         />
         <Image
-          className="pixel-decoration left-white-squiggle h-43.75! top-91.25!"
+          className="pixel-decoration left-white-squiggle h-43.75! top-55!"
           src="/assets/white-squiggle.png"
           alt=""
           width={77}
@@ -52,7 +52,7 @@ export default function Home() {
           priority
         />
         <Image
-          className="pixel-decoration white-ring"
+          className="pixel-decoration white-ring left-55!"
           src="/assets/whtie-ring.png"
           alt=""
           width={104}
@@ -73,7 +73,7 @@ export default function Home() {
             <br />
             Courses Available
           </h1>
-          <p className="mx-auto mt-4.25 mb-6.25 font-sans text-[18px]! leading-[1.35] w-full md:text-[9px]">
+          <p className="mx-auto mt-4.25 mb-6.25 text-[10px]! w-full md:text-[9px]">
             Unlock your creativity, gain valuable knowledge, and grow your
             business with our wide range of courses.
           </p>
@@ -81,16 +81,16 @@ export default function Home() {
             className="course-search flex items-center justify-center gap-1.75"
             onSubmit={(event) => event.preventDefault()}
           >
-            <label className="search-field flex h-5.5 w-[54vw] max-w-48.5 items-center rounded-[20px] bg-white px-2.5 text-[#9c9c9c]">
-              <span>⌕</span>
+            <label className="search-field flex h-8! w-[25vw]! items-center rounded-[20px] bg-white px-2.5 text-[#9c9c9c]">
+              <span >⌕</span>
               <input
-                className="w-full border-0 font-sans text-[7px] outline-0"
+                className="w-full border-0 font-sans text-[13px]! outline-0"
                 aria-label="Search courses"
                 placeholder="Course, topic, creator"
               />
             </label>
             <button
-              className="h-5.5 rounded-[20px] border-0 bg-[#b8ff00] px-3 font-sans text-[7px] text-[#122500]"
+              className="h-8! w-18 rounded-[20px] border-0 bg-[#b8ff00] px-3 font-sans text-[12px]! text-[#122500]"
               type="submit"
             >
               Search
@@ -108,16 +108,16 @@ export default function Home() {
             height={383}
             priority
           />
-          <div className="stat-card design-card">
-            <span>UI/UX Design</span>
-            <small>200 Courses · 1000+ Students</small>
+          <div className="stat-card design-card w-34 h-12 item-center justify-center top-14! left-12!">
+            <span className='text-[10px]!'>UI/UX Design</span>
+            <small className='text-[8px]!'>200 Courses · 1000+ Students</small>
           </div>
-          <div className="stat-card progress-card">
-            <span>Learning Progress</span>
+          <div className="stat-card progress-card w-40! h-18 item-center justify-center top-14! ">
+            <span className='text-[10px]!'>Learning Progress</span>
             <b>55%</b>
             <i />
           </div>
-          <div className="stat-card students-card">
+          <div className="stat-card students-card left-10!">
             <span>Happy Students</span>
             <small>
               45.2K <b>☺</b>

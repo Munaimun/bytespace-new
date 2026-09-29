@@ -14,7 +14,7 @@ export default function LearningPaths() {
   return (
     <section aria-labelledby="learning-paths-title" className="bg-white px-5 pb-20 pt-14 font-sans text-[#080b20] sm:pt-16">
       <div className="mx-auto text-center">
-        <h2 className="font-(family-name:--font-poppins) text-center" id="learning-paths-title">
+        <h2 className="text-center" id="learning-paths-title">
           Explore Diverse Learning Paths at Bytespace
         </h2>
         <p className="mx-auto mt-3 max-w-162.5 text-[11px] leading-[1.6] text-[#92959e] sm:text-[12px]">
