@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import CourseCard from "@/components/CourseCard";
 import SiteFooter from "@/components/SiteFooter";
@@ -136,19 +137,22 @@ export default function CoursesPage() {
                             className="flex h-8 items-center gap-1 rounded-full border border-[#e1e3e6] px-3 text-[12px]"
                             type="button"
                         >
-                            ▽ Filter
+                            <Image src="/assets/courseicon.png" alt="" width={15} height={15} />
+                            Filter
                         </button>
                         <button
                             className="flex h-8 items-center gap-1 rounded-full border border-[#e1e3e6] px-3 text-[12px]"
                             type="button"
                         >
-                            ☷ Level
+                            <Image src="/assets/levelicon.png" alt="" width={15} height={15} />
+                            Level
                         </button>
                         <button
                             className="flex h-8 items-center gap-1 rounded-full border border-[#e1e3e6] px-3 text-[12px]"
                             type="button"
                         >
-                            ⌾ Category
+                            <Image src="/assets/categoryicon.png" alt="" width={15} height={15} />
+                            Category
                         </button>
                     </div>
                     <label className="flex h-9 items-center gap-1 rounded-full border border-[#e1e3e6] px-3 text-[10px] text-[#555a62]">

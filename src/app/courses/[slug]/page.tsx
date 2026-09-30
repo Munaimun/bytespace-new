@@ -89,10 +89,11 @@ export default function CourseDetailPage() {
                                 </p>
                             </div>
                             <button
-                                className="rounded-full bg-[#baff00] px-4 py-2 text-[14px] text-[#263900]"
+                                className="flex items-center gap-1 rounded-full bg-[#baff00] px-4 py-2 text-[14px] text-[#263900]"
                                 type="button"
                             >
-                                ↗ Share
+                                <Image src="/assets/shareicon.png" alt="" width={16} height={16} />
+                                Share
                             </button>
                         </div>
                         <div className="mt-4 flex flex-wrap gap-2 text-[16px]">
@@ -121,11 +122,13 @@ export default function CourseDetailPage() {
                             unoptimized
                         />
                         <button
-                            className="absolute left-1/2 top-1/2 flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white/85 text-[22px] shadow-sm"
+                            className="absolute left-1/2 top-1/2 flex h-24 w-28 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-[18px] border border-[#5d514b] bg-[#806b60]/80 shadow-sm"
                             type="button"
                             aria-label="Play course preview"
                         >
-                            ▶
+                            <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[#f7f2ff]" aria-hidden="true">
+                                <span className="ml-1 h-0 w-0 border-y-10 border-l-14 border-y-transparent border-l-[#a98978]" />
+                            </span>
                         </button>
                     </div>
 
@@ -258,7 +261,7 @@ function LessonsContent() {
                         <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#baff00]">
                             <Image
                                 className="w-9"
-                                src="/assets/video.png"
+                                src="/assets/coursevideo.png"
                                 alt="Lesson icon"
                                 width={16}
                                 height={16}
@@ -395,11 +398,23 @@ function CourseSidebar({ lessons }: { lessons: string[] }) {
                 Enroll Now
             </button>
             <p className="mt-4 font-bold text-[30px] text-[#20242a]">This course include</p>
-            <ul className="mt-2 space-y-2">
-                <li>▣ Learning Resources</li>
-                <li>▣ Quality Lesson Videos</li>
-                <li>▣ Certificate of Completion</li>
-                <li>▣ Private Consultation</li>
+            <ul className="mt-4 space-y-4">
+                <li className="flex items-center gap-3 text-[20px] leading-tight">
+                    <Image src="/assets/learninglesson.png" alt="" width={30} height={30} />
+                    <span>Learning Resources</span>
+                </li>
+                <li className="flex items-center gap-3 text-[20px] leading-tight">
+                    <Image src="/assets/videolesson.png" alt="" width={30} height={30} />
+                    <span>Quality Lesson Videos</span>
+                </li>
+                <li className="flex items-center gap-3 text-[20px] leading-tight">
+                    <Image src="/assets/certificatelesson.png" alt="" width={30} height={30} />
+                    <span>Certificate of Completion</span>
+                </li>
+                <li className="flex items-center gap-3 text-[20px] leading-tight">
+                    <Image src="/assets/privatelesson.png" alt="" width={30} height={30} />
+                    <span>Private Consultation</span>
+                </li>
             </ul>
             <div className="my-3 border-t border-[#e5e6e8]" />
             <div className="flex items-center gap-2">
