@@ -20,7 +20,7 @@ export default function LoginPage() {
             <div className="mx-auto flex min-h-[calc(100vh-64px)] max-w-282 items-center justify-between gap-12 lg:gap-20">
                 <AuthArtwork />
                 <section
-                    className="relative h-96 w-full max-w-70 rounded-[13px] bg-white px-7 py-8 text-[#25282e] shadow-[0_16px_40px_rgba(0,23,111,0.2)] sm:px-8 sm:py-9"
+                    className="relative h-96 w-full max-w-90 rounded-[13px] bg-white px-7 py-8 text-[#25282e] shadow-[0_16px_40px_rgba(0,23,111,0.2)] sm:px-8 sm:py-9"
                     aria-labelledby="login-title"
                 >
                     <p className="text-[8px] text-[#1556e8]">Sign In</p>
@@ -39,7 +39,7 @@ export default function LoginPage() {
                         <Field label="Password" type="password" placeholder="********" />
                         <div className="flex justify-end pt-1">
                             <button
-                                className="rounded-full bg-[#baff00] px-4 py-2 text-[8px] text-[#243400] transition-transform hover:-translate-y-0.5"
+                                className="rounded-full bg-[#baff00] px-4 py-2 text-[12px] text-[#243400] transition-transform hover:-translate-y-0.5"
                                 type="submit"
                             >
                                 Sign In
@@ -51,7 +51,7 @@ export default function LoginPage() {
                             </p>
                         )}
                     </form>
-                    <div className="absolute inset-x-7 top-64 flex items-center gap-2 text-[7px] text-[#9da2a9] sm:inset-x-8">
+                    <div className="absolute inset-x-7 top-70 flex items-center gap-2 text-[7px] text-[#9da2a9] sm:inset-x-8">
                         <span className="h-px flex-1 bg-[#e1e3e6]" />
                         <span>or</span>
                         <span className="h-px flex-1 bg-[#e1e3e6]" />
@@ -72,7 +72,7 @@ export default function LoginPage() {
                             G
                         </button>
                     </div>
-                    <p className="absolute inset-x-0 bottom-5 text-center text-[8px] text-[#71767e]">
+                    <p className="absolute inset-x-0 bottom-5 text-center text-[12px] text-[#71767e]">
                         New user?{" "}
                         <Link className="text-[#1556e8]" href="/signup">
                             Create an account
@@ -104,32 +104,40 @@ function AuthArtwork() {
                     priority
                 />
             </Link>
-            <div className="absolute left-0 top-10 z-10 max-w-55">
+            <div className="absolute left-0 top-10 z-10">
                 <h2 className="text-[11px] font-semibold leading-none">
                     Sign in with ease
                 </h2>
-                <p className="mt-3 text-[8px] leading-[1.6] text-white/85">
+                <p className="mt-3 text-[12px] leading-[1.6] text-white/85">
                     Experience a seamless and efficient sign-in process that grants you
                     instant access to a world of knowledge.
                 </p>
             </div>
-            <div className="absolute left-1/2 top-35 h-72 w-67.5 -translate-x-1/2 border border-[#4c9cf2]/80">
-                <div className="absolute left-3 top-12 h-45 w-44 -rotate-1 overflow-hidden rounded-xl! bg-white p-2 text-[#1c2027] shadow-[0_14px_30px_rgba(1,24,117,0.25)]">
+            <div className="absolute left-1/2 top-40 h-72 w-67.5 -translate-x-1/2">
+                <div className="absolute left-3 top-12 h-50 w-50 -rotate-1 overflow-hidden rounded-xl! bg-white p-2 text-[#1c2027] shadow-[0_14px_30px_rgba(1,24,117,0.25)]">
                     <CoursePreview image={courseImage} title="the Power of Big Data" />
                 </div>
-                <div className="absolute left-16 top-0 z-20 h-49 w-45 rotate-1 overflow-hidden rounded-xl! bg-white p-2 text-[#1c2027] shadow-[0_14px_30px_rgba(1,24,117,0.25)]">
+                <div className="absolute left-16 top-0 z-20 h-50 w-50 rotate-1 overflow-hidden rounded-xl! bg-white p-2 text-[#1c2027] shadow-[0_14px_30px_rgba(1,24,117,0.25)]">
                     <CoursePreview image={courseImage} title="the Power of Big Data" />
                 </div>
-                <div className="absolute -bottom-2 left-26 z-30 w-32 rounded-[9px] bg-[#baff00] px-2 py-2 text-[#284000] shadow-[0_10px_24px_rgba(1,24,117,0.2)]">
-                    <span className="block text-[6px] font-semibold">Happy Students</span>
-                    <span className="block text-[5px]">45.2K</span>
-                    <div className="mt-1 flex -space-x-1">
-                        <i className="h-4 w-4 rounded-full border border-white bg-[#c48d68]" />
-                        <i className="h-4 w-4 rounded-full border border-white bg-[#4e332d]" />
-                        <i className="h-4 w-4 rounded-full border border-white bg-[#bb7653]" />
-                        <b className="flex h-4 w-4 items-center justify-center rounded-full border border-white bg-[#304500] text-[5px] text-white">
-                            2K+
-                        </b>
+                <div className="stat-card bg-[#D4FB20]! students-card left-25!">
+                    <span>Happy Students</span>
+                    <small>
+                        45.2K <b>☺</b>
+                    </small>
+                    <div className="mini-avatars">
+                        <Image
+                            className="mini-avatar"
+                            src="/assets/happyone.png"
+                            alt="Student"
+                            width={34}
+                            height={34}
+                        />
+                        <Image className="mini-avatar" src="/assets/albert.png" alt="Student" width={34} height={34} />
+                        <Image className="mini-avatar" src="/assets/alex.png" alt="Student" width={34} height={34} />
+                        <Image className="mini-avatar" src="/assets/james.png" alt="Student" width={34} height={34} />
+
+                        <b>2K+</b>
                     </div>
                 </div>
             </div>
@@ -162,10 +170,10 @@ function Field({
     placeholder: string;
 }) {
     return (
-        <label className="block text-[7px] text-[#20242a]">
+        <label className="block text-[16px] text-[#20242a]">
             <span className="mb-1 block">{label}</span>
             <input
-                className="h-6.5 w-full rounded-md! border border-[#e1e3e6] px-3 text-[8px] outline-none transition-colors placeholder:text-[#9da2a9] focus:border-[#1556e8]"
+                className="h-6.5 w-full rounded-md! border border-[#e1e3e6] px-3 text-[13px] outline-none transition-colors placeholder:text-[#9da2a9] focus:border-[#1556e8]"
                 type={type}
                 placeholder={placeholder}
                 required

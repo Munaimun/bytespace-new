@@ -50,34 +50,68 @@ export default function SignupPage() {
                         </p>
                     </div>
                     <div className="absolute left-1/2 top-35 h-70 w-full -translate-x-1/2">
+                        {/* Background Course Card */}
                         <div className="absolute left-0 top-16 h-96 w-93.25 -rotate-1 overflow-hidden rounded-xl! bg-white p-2 text-[#1c2027] shadow-[0_14px_30px_rgba(1,24,117,0.25)]">
                             <CoursePreview
                                 image={courseImages[1]}
                                 title="Build Digital Asset"
                             />
                         </div>
+
+                        {/* Foreground Course Card */}
                         <div className="absolute left-14 top-12 z-20 h-96 w-93.25 rotate-1 overflow-hidden rounded-xl! bg-white p-2 text-[#1c2027] shadow-[0_14px_30px_rgba(1,24,117,0.25)]">
                             <CoursePreview
                                 image={courseImages[0]}
                                 title="the Power of Big Data"
                             />
                         </div>
-                        <div className="absolute -bottom-50 left-50 z-30 w-40 rounded-[9px] bg-[#baff00] px-2 py-2 text-[#284000] shadow-[0_10px_24px_rgba(1,24,117,0.2)]">
-                            <span className="block text-[16px] font-semibold">
-                                Happy Students
-                            </span>
-                            <span className="block text-[10px]">45.2K</span>
-                            <div className="mt-1 flex -space-x-1">
-                                <i className="h-4 w-4 rounded-full border border-white bg-[#c48d68]" />
-                                <i className="h-4 w-4 rounded-full border border-white bg-[#4e332d]" />
-                                <i className="h-4 w-4 rounded-full border border-white bg-[#bb7653]" />
-                                <i className="h-4 w-4 rounded-full border border-white bg-[#c5a078]" />
-                                <b className="flex h-4 w-4 items-center justify-center rounded-full border border-white bg-[#304500] text-[5px] text-white">
+
+                        {/* Happy Students Floating Card (z-30 places it above course card) */}
+                        <div className="absolute left-6 top-64 z-30 flex items-center gap-3.5 rounded-2xl bg-white p-3.5 text-[#1c2027] shadow-[0_14px_30px_rgba(1,24,117,0.25)]">
+                            <div className="flex flex-col">
+                                <span className="text-[11px] font-semibold text-gray-500">
+                                    Happy Students
+                                </span>
+                                <small className="text-sm font-bold text-gray-900">
+                                    45.2K <b className="text-amber-500">☺</b>
+                                </small>
+                            </div>
+                            <div className="flex items-center -space-x-2 overflow-hidden">
+                                <Image
+                                    className="inline-block h-8 w-8 rounded-full object-cover ring-2 ring-white"
+                                    src="/assets/happyone.png"
+                                    alt="Student"
+                                    width={34}
+                                    height={34}
+                                />
+                                <Image
+                                    className="inline-block h-8 w-8 rounded-full object-cover ring-2 ring-white"
+                                    src="/assets/albert.png"
+                                    alt="Student"
+                                    width={34}
+                                    height={34}
+                                />
+                                <Image
+                                    className="inline-block h-8 w-8 rounded-full object-cover ring-2 ring-white"
+                                    src="/assets/alex.png"
+                                    alt="Student"
+                                    width={34}
+                                    height={34}
+                                />
+                                <Image
+                                    className="inline-block h-8 w-8 rounded-full object-cover ring-2 ring-white"
+                                    src="/assets/james.png"
+                                    alt="Student"
+                                    width={34}
+                                    height={34}
+                                />
+                                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-blue-100 text-[10px] font-bold text-[#1556e8] ring-2 ring-white">
                                     2K+
-                                </b>
+                                </span>
                             </div>
                         </div>
                     </div>
+
                     <div className="absolute left-6 top-37 h-12 w-12 rounded-full border-11! border-[#baff00]" />
                     <Image
                         className="absolute -bottom-2 left-0 h-20 w-20 object-contain"
@@ -100,14 +134,14 @@ export default function SignupPage() {
                     aria-labelledby="signup-title"
                 >
                     <p className="text-[18px] text-[#1556e8]">Create an Account</p>
-                    <h2
-                        className="mt-1 text-[59px]! font-bold"
+                    <p
+                        className="mt-1 w-full text-[25px]! font-bold"
                         id="signup-title"
                     >
                         Welcome to
                         <br />
                         ByteSpace
-                    </h2>
+                    </p>
                     <form className="mt-6 space-y-3.5" onSubmit={handleSubmit}>
                         <Field label="Full Name" type="text" placeholder="Jamie Davis" />
                         <Field
@@ -118,7 +152,7 @@ export default function SignupPage() {
                         <Field label="Password" type="password" placeholder="********" />
                         <div className="flex justify-end pt-0.5">
                             <button
-                                className="rounded-full bg-[#baff00] px-4 py-2 text-[8px] text-[#243400] transition-transform hover:-translate-y-0.5"
+                                className="rounded-full bg-[#baff00] px-4 py-2 text-[12px] text-[#243400] transition-transform hover:-translate-y-0.5"
                                 type="submit"
                             >
                                 Continue
@@ -130,13 +164,12 @@ export default function SignupPage() {
                             </p>
                         )}
                     </form>
-                    <p className="absolute inset-x-0 bottom-7 text-center text-[8px] text-[#71767e]">
+                    <p className="absolute inset-x-0 bottom-7 text-center text-[12px] text-[#71767e]">
                         Already have an account?{" "}
                         <Link className="text-[#1556e8]" href="/login">
                             Login
                         </Link>
                     </p>
-
                 </section>
             </div>
         </main>
@@ -156,7 +189,7 @@ function Field({
         <label className="block text-[14px] text-[#20242a]">
             <span className="mb-1 block">{label}</span>
             <input
-                className="h-6.5 w-full rounded-md! border border-[#e1e3e6] px-3 text-[8px] outline-none transition-colors placeholder:text-[#9da2a9] focus:border-[#1556e8]"
+                className="h-6.5 w-full rounded-md! border border-[#e1e3e6] px-3 text-[12px] outline-none transition-colors placeholder:text-[#9da2a9] focus:border-[#1556e8]"
                 type={type}
                 placeholder={placeholder}
                 required
