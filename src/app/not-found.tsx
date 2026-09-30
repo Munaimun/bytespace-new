@@ -7,11 +7,31 @@ export default function NotFound() {
         <main className="bg-white font-sans text-[#111421]" id="top">
             <section className="bg-[#073bd5] bg-[linear-gradient(#ffffff1c_1px,transparent_1px),linear-gradient(90deg,#ffffff1c_1px,transparent_1px)] bg-size-[61px_61px] text-white">
                 <SiteHeader />
-                <div className="flex min-h-105 flex-col items-center justify-center px-6 pb-10 pt-3 text-center sm:min-h-110">
-                    <h1 className="text-[clamp(100px,18vw,180px)] font-bold leading-[.78] tracking-[-8px] text-[#baff00]">404</h1>
-                    <h2 className="mt-5 max-w-110 text-[22px] font-bold leading-[1.02] tracking-[-.7px] sm:text-[25px]">The page you are looking<br />for doesn&apos;t exist</h2>
-                    <p className="mt-4 text-[7px] text-white/80">Try a URL or select a tab to navigate to a valid page</p>
-                    <Link className="mt-4 rounded-full bg-[#baff00] px-4 py-2 text-[7px] text-[#304500] transition-transform hover:-translate-y-0.5" href="/">Back to Home</Link>
+                <div className="flex flex-col items-center justify-center px-6 pb-16 pt-6 text-center">
+                    {/* 404 Text with Gradient */}
+                    <h1 className="select-none bg-linear-to-b from-[#d4ff00] via-[#8ce21e] to-[#4c9222] bg-clip-text text-[150px] font-black leading-none tracking-tight text-transparent sm:text-[260px] md:text-[340px] lg:text-[400px]">
+                        404
+                    </h1>
+
+                    {/* Headline overlapping 404 */}
+                    <h2 className="relative z-10 -mt-16 text-3xl font-bold! leading-tight tracking-tight text-white sm:-mt-28 sm:text-5xl md:-mt-36 md:text-6xl -top-25">
+                        The page you are looking
+                        <br />
+                        for doesn’t exist
+                    </h2>
+
+                    {/* Subtitle */}
+                    <p className="mt-6 text-xs text-white/80 sm:text-sm md:text-base">
+                        Try to use a correct url or go back to homepage to start again
+                    </p>
+
+                    {/* Back to Home Button */}
+                    <Link
+                        className="mt-8 rounded-full bg-[#baff00] px-7 py-3 text-sm font-semibold text-black! transition-transform hover:-translate-y-0.5"
+                        href="/"
+                    >
+                        Back to Home
+                    </Link>
                 </div>
             </section>
             <SiteFooter />

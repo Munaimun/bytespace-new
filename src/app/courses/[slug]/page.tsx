@@ -72,41 +72,46 @@ export default function CourseDetailPage() {
 
     return (
         <main className="bg-white font-sans text-[#111421]" id="top">
-            <SiteHeader />
-            <div className="bg-[#073bd5] bg-[linear-gradient(#ffffff1c 1px,transparent 1px),linear-gradient(90deg,#ffffff1c 1px,transparent 1px)] bg-size-[48px_48px] px-6 text-white sm:px-10 lg:px-16">
-                <div className="mx-auto max-w-232.5 pb-5 pt-8 sm:pt-9">
-                    <div className="flex flex-wrap items-center justify-between gap-5">
-                        <div>
-                            <h1 className="max-w-170 text-[18px] font-bold leading-[1.1] sm:text-[20px]">
-                                {course.title}
-                            </h1>
-                            <p className="mt-1 text-[8px] text-white/90">{course.subtitle}</p>
-                            <p className="mt-2 text-[6px]">
-                                by <span className="text-white/75">purepixel studio</span>
-                            </p>
+            <div className="bg-[#073bd5] bg-[linear-gradient(#ffffff1c_1px,transparent_1px),linear-gradient(90deg,#ffffff1c_1px,transparent_1px)] bg-size-[51px_51px] text-white">
+                <SiteHeader />
+                <div className="px-6 sm:px-10 lg:px-16">
+                    <div className="mx-auto max-w-232.5 pb-5 pt-8 sm:pt-9">
+                        <div className="flex flex-wrap items-center justify-between gap-5">
+                            <div>
+                                <h1 className="text-[22px] font-bold leading-[1.1] sm:text-[28px]">
+                                    {course.title}
+                                </h1>
+                                <p className="mt-1 text-[16px] text-white/90">
+                                    {course.subtitle}
+                                </p>
+                                <p className="mt-2 text-[14px]">
+                                    by <span className="text-lime-300">purepixel studio</span>
+                                </p>
+                            </div>
+                            <button
+                                className="rounded-full bg-[#baff00] px-4 py-2 text-[14px] text-[#263900]"
+                                type="button"
+                            >
+                                ↗ Share
+                            </button>
                         </div>
-                        <button
-                            className="rounded-full bg-[#baff00] px-4 py-2 text-[8px] text-[#263900]"
-                            type="button"
-                        >
-                            ↗ Share
-                        </button>
-                    </div>
-                    <div className="mt-4 flex flex-wrap gap-2 text-[7px]">
-                        <span className="rounded-full bg-white px-3 py-1 text-[#1556e8]">
-                            ▣ Intermediate
-                        </span>
-                        <span className="rounded-full bg-white px-3 py-1 text-[#1556e8]">
-                            ★ 4.8 (172 reviews)
-                        </span>
-                        <span className="rounded-full bg-white px-3 py-1 text-[#1556e8]">
-                            ♟ 79K Students
-                        </span>
+                        <div className="mt-4 flex flex-wrap gap-2 text-[16px]">
+                            <span className="rounded-full bg-white px-3 py-1 text-black">
+                                ▣ Intermediate
+                            </span>
+                            <span className="rounded-full bg-white px-3 py-1 text-black">
+                                ★ 4.8 (172 reviews)
+                            </span>
+                            <span className="rounded-full bg-white px-3 py-1 text-black">
+                                ♟ 79K Students
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
+
             <section className="mx-auto grid max-w-232.5 gap-7 px-6 py-7 sm:px-10 lg:grid-cols-[minmax(0,1fr)_230px] lg:px-16">
-                <div className="min-w-0">
+                <div className="">
                     <div className="relative aspect-[1.8/1] overflow-hidden rounded-[9px] bg-[#e8e8e8]">
                         <Image
                             className="object-cover"
@@ -116,14 +121,15 @@ export default function CourseDetailPage() {
                             unoptimized
                         />
                         <button
-                            className="absolute left-1/2 top-1/2 flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white/85 text-[22px] text-[#777] shadow-sm"
+                            className="absolute left-1/2 top-1/2 flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white/85 text-[22px] shadow-sm"
                             type="button"
                             aria-label="Play course preview"
                         >
                             ▶
                         </button>
                     </div>
-                    <div className="mt-7 flex gap-2 border-b border-[#e5e6e8] pb-3 text-[8px]">
+
+                    <div className="mt-7 flex gap-2 border-b border-[#e5e6e8] pb-3">
                         <TabButton
                             active={activeTab === "About"}
                             onClick={() => setActiveTab("About")}
@@ -165,7 +171,7 @@ function TabButton({
 }) {
     return (
         <button
-            className={`rounded-full px-3 py-1.5 text-[8px] ${active ? "bg-[#baff00] text-[#304500]" : "bg-[#f5f5f6] text-[#555a62]"}`}
+            className={`rounded-full px-3 py-1.5 text-[14px] ${active ? "bg-[#baff00] text-[#304500]" : "bg-[#f5f5f6] text-[#555a62]"}`}
             type="button"
             onClick={onClick}
         >
@@ -176,8 +182,8 @@ function TabButton({
 
 function AboutContent() {
     return (
-        <div className="pt-5 text-[8px] leading-[1.55] text-[#686d75]">
-            <h2 className="font-bold text-[#20242a]">Description</h2>
+        <div className="pt-5 text-[13px] leading-[1.55] text-[#686d75]">
+            <p className="font-bold text-[40px] text-[#20242a]">Description</p>
             <p className="mt-3">
                 Embark on an enlightening exploration of the world of digital creation
                 with our comprehensive course, “Digital Asset: A Comprehensive Guide.”
@@ -196,7 +202,7 @@ function AboutContent() {
                 impactful creations. Uncover the secrets behind effective visual
                 communication.
             </p>
-            <h2 className="mt-5 font-bold text-[#20242a]">Sneak Peek</h2>
+            <p className="mt-5 font-bold text-[40px] text-[#20242a]">Sneak Peek</p>
             <div className="mt-3 flex gap-2 overflow-hidden">
                 {thumbnails.map((image) => (
                     <Image
@@ -210,7 +216,7 @@ function AboutContent() {
                     />
                 ))}
             </div>
-            <h2 className="mt-5 font-bold text-[#20242a]">Key Points</h2>
+            <p className="mt-5 font-bold text-[40px] text-[#20242a]">Key Points</p>
             <ul className="mt-3 space-y-2">
                 {[
                     "Foundational Concepts",
@@ -222,8 +228,8 @@ function AboutContent() {
                     "Monetization Strategies",
                     "Capstone Project Building Your Portfolio",
                 ].map((item) => (
-                    <li className="flex items-center gap-2" key={item}>
-                        <span className="flex h-3 w-3 items-center justify-center rounded-full bg-[#1556e8] text-[7px] text-white">
+                    <li className="flex items-center text-[12px]! gap-2" key={item}>
+                        <span className="flex h-3 w-3 items-center justify-center rounded-full bg-[#1556e8] text-white">
                             ✓
                         </span>
                         {item}
@@ -236,22 +242,30 @@ function AboutContent() {
 
 function LessonsContent() {
     return (
-        <div className="pt-5 text-[8px] leading-[1.55] text-[#686d75]">
-            <h2 className="font-bold text-[#20242a]">Explore the Modules</h2>
-            <p className="mt-3">
+        <div className="pt-5 leading-[1.55] text-[#686d75]">
+            <p className="font-bold text-[40px] text-[#20242a]">
+                Explore the Modules
+            </p>
+            <p className="mt-3 text-[13px]">
                 Immerse yourself in the course content as we break down each module into
                 comprehensive lessons, providing practical insights and hands-on
                 experiences.
             </p>
-            <h2 className="mt-5 font-bold text-[#20242a]">Lesson List</h2>
+            <p className="mt-5 text-[40px] font-bold text-[#20242a]">Lesson List</p>
             <div className="mt-3 space-y-3">
                 {lessons.map((lesson, index) => (
                     <div className="flex gap-3" key={lesson}>
-                        <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#baff00] text-[#304500]">
-                            ▣
+                        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#baff00]">
+                            <Image
+                                className="w-9"
+                                src="/assets/video.png"
+                                alt="Lesson icon"
+                                width={16}
+                                height={16}
+                            />
                         </span>
                         <p>
-                            <strong className="text-[#20242a]">
+                            <strong className="font-semibold text-[#20242a]">
                                 Module {index + 1}: {lesson}
                             </strong>
                             <br />
@@ -261,20 +275,23 @@ function LessonsContent() {
                     </div>
                 ))}
             </div>
-            <h2 className="mt-5 font-bold text-[#20242a]">Lesson Content</h2>
+
+            <p className="mt-5 font-bold text-[40px] text-[#20242a]">
+                Lesson Content
+            </p>
             <p className="mt-3">
                 Engage with each lesson through captivating video content, detailed
                 textual explanations, and interactive elements.
             </p>
-            <h2 className="mt-5 font-bold text-[#20242a]">
+            <p className="mt-5 font-bold text-[40px] text-[#20242a]">
                 Lesson Progress Tracking
-            </h2>
+            </p>
             <p className="mt-3">
                 Witness your growth as you complete lessons, with an intuitive progress
                 tracking feature guiding you through your learning journey.
             </p>
             <div className="mt-4 rounded-[7px] border border-[#dfe1e5] p-3">
-                <span className="text-[7px]">Learning Progress</span>
+                <span className="text-[14px] text-black">Learning Progress</span>
                 <strong className="mt-1 block text-[16px] text-[#20242a]">55%</strong>
                 <div className="mt-1 h-1 rounded-full bg-[#e5e6e8]">
                     <div className="h-1 w-[55%] rounded-full bg-[#baff00]" />
@@ -286,9 +303,11 @@ function LessonsContent() {
 
 function ReviewsContent() {
     return (
-        <div className="pt-5 text-[8px] leading-[1.55] text-[#686d75]">
-            <h2 className="font-bold text-[#20242a]">What Learners Are Saying</h2>
-            <p className="mt-3">
+        <div className="pt-5 leading-[1.55] text-[#686d75]">
+            <p className="font-bold text-[40px] text-[#20242a]">
+                What Learners Are Saying
+            </p>
+            <p className="mt-3 text-[18px]">
                 Discover what our learners have to say about their experience with this
                 course. Hear from people who have embraced the learning and
                 transformation.
@@ -323,14 +342,17 @@ function ReviewsContent() {
                     16
                 </span>
             </div>
-            <h2 className="mt-5 font-bold text-[#20242a]">Individual Reviews:</h2>
+            <p className="mt-5 font-bold text-[40px] text-[#20242a]">
+                Individual Reviews:
+            </p>
             <div className="mt-3 space-y-3">
                 {["PurePearl Studio", "Albert Flores", "Cody Fisher"].map((name) => (
                     <article
                         className="rounded-[9px] border border-[#dfe1e5] p-4"
                         key={name}
                     >
-                        <div className="flex justify-between">
+                        <div className="flex gap-2">
+                            <Image src="/assets/purple.png" alt="" width={35} height={35} />
                             <strong className="text-[#20242a]">{name}</strong>
                             <span>a year ago</span>
                         </div>
@@ -349,7 +371,7 @@ function ReviewsContent() {
 
 function CourseSidebar({ lessons }: { lessons: string[] }) {
     return (
-        <aside className="h-fit rounded-[10px] border border-[#dfe1e5] p-4 text-[7px] text-[#464b54] lg:sticky lg:top-4">
+        <aside className="h-fit w-87.5 rounded-[10px] border border-[#dfe1e5] p-4 text-[#464b54] lg:sticky lg:top-4">
             <strong className="text-[#20242a]">102 Lessons (24 hours)</strong>
             <ol className="mt-3 space-y-2">
                 {lessons.slice(0, 3).map((lesson, index) => (
@@ -363,16 +385,16 @@ function CourseSidebar({ lessons }: { lessons: string[] }) {
             <p className="mt-3 border-t border-[#e5e6e8] pt-3">
                 Ready to Dive In? Enroll Now and Start Building Your Digital Future!
             </p>
-            <strong className="mt-2 block text-[17px] text-[#1556e8]">
-                $25<span className="text-[7px] text-[#777c86]">/lifetime</span>
+            <strong className="mt-2 block text-[24px] text-[#1556e8]">
+                $25<span className="text-[12px] text-[#777c86]">/lifetime</span>
             </strong>
             <button
-                className="mt-3 w-full rounded-full bg-[#baff00] py-2 text-[7px] text-[#304500]"
+                className="mt-3 w-full rounded-full bg-[#baff00] py-2 text-[16px] text-black"
                 type="button"
             >
                 Enroll Now
             </button>
-            <h2 className="mt-4 font-bold text-[#20242a]">This course include</h2>
+            <p className="mt-4 font-bold text-[30px] text-[#20242a]">This course include</p>
             <ul className="mt-2 space-y-2">
                 <li>▣ Learning Resources</li>
                 <li>▣ Quality Lesson Videos</li>
@@ -382,11 +404,11 @@ function CourseSidebar({ lessons }: { lessons: string[] }) {
             <div className="my-3 border-t border-[#e5e6e8]" />
             <div className="flex items-center gap-2">
                 <Image
-                    className="h-6 w-6 rounded-full object-cover"
-                    src="/assets/first-slider.png"
+                    className="h-9 rounded-full object-cover"
+                    src="/assets/purple.png"
                     alt="Creator"
-                    width={24}
-                    height={24}
+                    width={35}
+                    height={35}
                 />
                 <span>
                     <strong className="block text-[#20242a]">PurePearl Studio</strong>
@@ -397,7 +419,7 @@ function CourseSidebar({ lessons }: { lessons: string[] }) {
                 Ready to Dive In? Enroll Now and Start Building Your Digital Future!
             </p>
             <button
-                className="mt-3 rounded-full border border-[#dfe1e5] px-3 py-1.5 text-[7px]"
+                className="mt-3 rounded-full border border-[#dfe1e5] px-3 py-1.5 text-[13px]"
                 type="button"
             >
                 See Full Profile
