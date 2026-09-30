@@ -52,8 +52,8 @@ export default function SignupPage() {
                     <div className="absolute left-1/2 top-35 h-70 w-full -translate-x-1/2">
                         <div className="absolute left-0 top-16 h-96 w-93.25 -rotate-1 overflow-hidden rounded-xl! bg-white p-2 text-[#1c2027] shadow-[0_14px_30px_rgba(1,24,117,0.25)]">
                             <CoursePreview
-                                image={courseImages[2]}
-                                title="Balancing Productivity and Life"
+                                image={courseImages[1]}
+                                title="Build Digital Asset"
                             />
                         </div>
                         <div className="absolute left-14 top-12 z-20 h-96 w-93.25 rotate-1 overflow-hidden rounded-xl! bg-white p-2 text-[#1c2027] shadow-[0_14px_30px_rgba(1,24,117,0.25)]">
@@ -71,6 +71,7 @@ export default function SignupPage() {
                                 <i className="h-4 w-4 rounded-full border border-white bg-[#c48d68]" />
                                 <i className="h-4 w-4 rounded-full border border-white bg-[#4e332d]" />
                                 <i className="h-4 w-4 rounded-full border border-white bg-[#bb7653]" />
+                                <i className="h-4 w-4 rounded-full border border-white bg-[#c5a078]" />
                                 <b className="flex h-4 w-4 items-center justify-center rounded-full border border-white bg-[#304500] text-[5px] text-white">
                                     2K+
                                 </b>
