@@ -123,11 +123,17 @@ export default function Home() {
               45.2K <b>☺</b>
             </small>
             <div className="mini-avatars">
-              <i />
-              <i />
-              <i />
-              <i />
-              <i />
+              <Image
+                className="mini-avatar"
+                src="/assets/happyone.png"
+                alt="Student"
+                width={34}
+                height={34}
+              />
+              <Image className="mini-avatar" src="/assets/albert.png" alt="Student" width={34} height={34} />
+              <Image className="mini-avatar" src="/assets/alex.png" alt="Student" width={34} height={34} />
+              <Image className="mini-avatar" src="/assets/james.png" alt="Student" width={34} height={34} />
+
               <b>2K+</b>
             </div>
           </div>
